@@ -1,0 +1,61 @@
+<div class="container-fluid col-sm-12" ng-model="recipe" ng-click="incrementCounter()">
+  <div class="timer">
+    <span class="btn btn-primary" ng-click="startTimer($event)">
+      Start timer
+    </span>
+    <div class="counter">
+      {{timeRemaining}}
+    </div>
+  </div>
+  <div class="title">
+    <div>
+      <strong>{{recipe.recipe.name}}</strong>
+    </div>
+  </div>
+  <br/>
+
+  <div class="ingredients" ng-click="displayIngredients($event)">
+    <div class="title">
+      <strong>Ingredients (Click to show/hide)</strong>
+    </div>
+    <div class="ingredientList" ng-repeat="ingredient in recipe.recipe.ingredients" ng-show="showIngredients">
+      {{ingredient.ingredient}}
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="fullScreenImage col-sm-6">
+      <img src="{{recipe.recipe.img}}" alt="{{recipe.recipe.name}}">
+  </div>
+
+    <div class="fullScreenSplit col-sm-6">
+      <accordion close-others="true">
+      <accordion-group class="operation hidden-xs"
+                       heading="Step {{step.sequence}}"
+                       is-open="status.isItemOpen[$index]"
+                       ng-repeat="step in recipe.recipe.meta"
+                       ng-click="findMinutes($event)">
+        <div >{{step.value}}</div>
+      </accordion-group>
+    </accordion>
+
+    <div class="operation xs" ng-repeat="step in recipe.recipe.meta" ng-show="stepNumber === step.sequence">
+      <div class="title"><strong>Step {{step.sequence}}</strong></div>
+      <div class="description">{{step.value}}</div>
+    </div>
+  </div>
+  </div>
+
+  <div class="image xs" ng-show="counter === length + 1">
+    <img src="{{recipe.recipe.img}}" alt="{{recipe.recipe.name}}">
+  </div>
+  <div class="enjoy xs" ng-show="counter === length + 1">
+    <strong><i>Enjoy!</i></strong>
+  </div>
+
+  <div class="buttonContainer xs" ng-hide="counter === 1">
+    <div class="btn btn-primary" ng-click="decrementCounter($event)">
+      Back
+    </div>
+  </div>
+</div>
