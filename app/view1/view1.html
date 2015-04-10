@@ -1,4 +1,4 @@
-<div class="container-fluid col-sm-12" ng-model="recipe" ng-click="incrementCounter()">
+<div class="" ng-model="recipe" ng-click="incrementCounter()">
   <div class="timer">
     <span class="btn btn-primary" ng-click="startTimer($event)">
       Start timer
@@ -23,12 +23,12 @@
     </div>
   </div>
 
-  <div class="col-sm-12">
-    <div class="fullScreenImage col-sm-6">
+  <div class="fullScreen">
+    <div class="fullScreenImage">
       <img src="{{recipe.recipe.img}}" alt="{{recipe.recipe.name}}">
   </div>
 
-    <div class="fullScreenSplit col-sm-6">
+    <div class="fullScreenInstructions">
       <accordion close-others="true">
       <accordion-group class="operation hidden-xs"
                        heading="Step {{step.sequence}}"

@@ -3,18 +3,27 @@
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 .menu {
+  background-color: #222;
+  color: whitesmoke;
+  font-size: 2em;
   list-style: none;
   border-bottom: 0.1em solid black;
+  margin-top: 0;
   margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
+  padding: .5em 1em 0.5em;
+  height: 2em;
+  vertical-align: middle;
+  /* font-family: 'Abel', sans-serif; */
+  /* font-family: 'Poiret One', cursive; */
+  /* font-family: 'Quicksand', sans-serif; */
+  /* font-family: 'Josefin Sans', sans-serif; */
+  /* font-family: 'Josefin Slab', serif; */
+  /* font-family: 'Droid Serif', serif; */
+  /*font-family: 'Inconsolata', ;*/
+  font-family: 'Pacifico', cursive;
+  /* font-family: 'Fjalla One', sans-serif; */
+  /* font-family: 'Quattrocento Sans', sans-serif; */
+  /* font-family: 'Dancing Script', cursive; */
 }
 
 .menu > li {
@@ -47,17 +56,6 @@ body {
   border-radius: 3px;
   padding: 5px;
   margin: 0 auto 5px auto;
-  /* font-family: 'Abel', sans-serif;
-   font-family: 'Poiret One', cursive;
-   font-family: 'Quicksand', sans-serif;
-  font-family: 'Josefin Sans', sans-serif;
-  font-family: 'Josefin Slab', serif;
-  font-family: 'Droid Serif', serif;
-  font-family: 'Inconsolata', ;
-  font-family: 'Pacifico', cursive;
-  font-family: 'Fjalla One', sans-serif;
-  font-family: 'Quattrocento Sans', sans-serif;
-  font-family: 'Dancing Script', cursive; */
   font-family: 'Raleway', sans-serif;
 }
 
@@ -99,17 +97,31 @@ img {
     display: none;
   }
 
+  .menu span {
+    width: 90%;
+  }
+
   .timer {
     width: 90%;
   }
 }
 
 @media screen and (min-width: 401px) {
-  .fullScreenImage, fullScreenSplit {
-    display: inline;
+  .fullScreen {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .fullScreenImage, .fullScreenInstructions {
+    display: inline-block;
+    width: 50%;
   }
 
-  .ingredients {
+  .fullScreenInstructions {
+    float: right;
+  }
+
+  img {
+    /* width: 100%; */
   }
 
   .timer {
