@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "description": "Code challenge",
-      "repository": "https://github.com/monsterblader/foExercise",
-      "license": "MIT",
-      "engines": {
-        "node": "0.12.x",
-              "npm": "2.7.x"
-      },
+  "repository": "https://github.com/monsterblader/foExercise",
+  "license": "MIT",
+  "engines": {
+    "node": "^0.12.x",
+          "npm": "^2.7.x"
+  },
   "devDependencies": {
     "karma": "~0.10",
     "protractor": "^1.1.1",
@@ -31,6 +31,7 @@
     "update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + sed(/sourceMappingURL=angular-loader.min.js.map/,'sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map','app/bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\""
   },
   "dependencies": {
+    "bower": "^1.4.1",
     "express": "^4.12.3"
   }
 }
