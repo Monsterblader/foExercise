@@ -58,6 +58,7 @@ angular.module('myApp.view1', ['ngRoute'])
             scope.displayIngredients = function (e) {
               e.stopPropagation();
               scope.showIngredients = !scope.showIngredients;
+              scope.ingredients = !scope.ingredients;
             };
 
             scope.status = {

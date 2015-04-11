@@ -7,16 +7,11 @@
       {{timeRemaining}}
     </div>
   </div>
-  <div class="title">
-    <div>
-      <strong>{{recipe.recipe.name}}</strong>
-    </div>
-  </div>
-  <br/>
 
   <div class="ingredients" ng-click="displayIngredients($event)">
     <div class="title">
-      <strong>Ingredients (Click to show/hide)</strong>
+      <strong ng-hide="ingredients">{{recipe.recipe.name}} (Ingredients)</strong>
+      <strong ng-show="ingredients">Ingredients ({{recipe.recipe.name}})</strong>
     </div>
     <div class="ingredientList" ng-repeat="ingredient in recipe.recipe.ingredients" ng-show="showIngredients">
       {{ingredient.ingredient}}
