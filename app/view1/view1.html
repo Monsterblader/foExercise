@@ -10,8 +10,8 @@
 
   <div class="ingredients" ng-click="displayIngredients($event)">
     <div class="title">
-      <strong ng-hide="ingredients">{{recipe.recipe.name}} (Ingredients)</strong>
-      <strong ng-show="ingredients">Ingredients ({{recipe.recipe.name}})</strong>
+      <span ng-hide="ingredients"><strong>{{recipe.recipe.name}}</strong> <span class="hiddenTitle">(Ingredients)</span></span>
+      <span ng-show="ingredients"><strong>Ingredients</strong> <span class="hiddenTitle">({{recipe.recipe.name}})</span></span>
     </div>
     <div class="ingredientList" ng-repeat="ingredient in recipe.recipe.ingredients" ng-show="showIngredients">
       {{ingredient.ingredient}}

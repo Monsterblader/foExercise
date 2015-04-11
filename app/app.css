@@ -78,6 +78,10 @@ body {
   margin-top: -5px;
 }
 
+.hiddenTitle {
+  color: lightgray;
+}
+
 img {
   border-radius: 3px;
   width: 100%;
